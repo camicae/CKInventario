@@ -3,7 +3,6 @@
 
 Sistema web para gerenciamento de inventário de peças de uma equipe Baja SAE, desenvolvido com foco em leveza, organização e modularidade.
 
-O projeto ainda está em fase de desenvolvimento ativo, com a base estrutural já definida para facilitar evolução futura.
 
 Demo:
 

@@ -1,7 +1,7 @@
 interface PecasGerais {
   id:string;
   nome:string;
-  subsistema_id:string;
+  subsistema_nome:string;
   // caso exista.
   // pode ser null
   data_fabricacao:string;

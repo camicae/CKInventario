@@ -5,6 +5,7 @@ Sistema web para gerenciamento de inventário de peças de uma equipe Baja SAE, 
 
 
 Demo (clique para melhor visualização):
+
 ![demo_v2-ezgif com-cut](https://github.com/user-attachments/assets/bae2d714-27f3-45c1-9bab-c6aaea4075cf)
 
 

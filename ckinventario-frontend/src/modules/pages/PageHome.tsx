@@ -1,13 +1,8 @@
-import React from 'react';
-import Index from '../home';
+import React from "react";
+import Index from "../Home";
 
-const PageHome = ()=>{
+const PageHome = () => {
+  return <Index />;
+};
 
-    return (
-        <Index/>
-    )
-}
-
-export default PageHome
-
-
+export default PageHome;

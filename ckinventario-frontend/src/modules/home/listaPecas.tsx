@@ -9,9 +9,10 @@ import SearchBarBasic from "../utilities/searchBar";
 interface ListarPecasProps {
   searchParams: URLSearchParams;
   setSearchParams: SetURLSearchParams;
+  isDisabled: boolean;
 }
 
-const ListarPecas = ({ searchParams, setSearchParams }: ListarPecasProps) => {
+const ListarPecas = ({ searchParams, setSearchParams, isDisabled }: ListarPecasProps) => {
   const [pecas, setPecas] = useState<PecasGerais[]>([]);
   // const [searchParams, setSearchParams] = useSearchParams();
 
@@ -38,13 +39,15 @@ const ListarPecas = ({ searchParams, setSearchParams }: ListarPecasProps) => {
   }, [searchParams]);
 
   return (
-    <div className=" p-5">
-      <SearchBarBasic />
-      <Row>
+    <div className="mt-3 p-3">
+      {isDisabled == false ? (<SearchBarBasic/>): ('')}
+      <Row className="w-70">
         <Table
-          responsive
+          responsive="md"
+          striped
+          hover
           variant="warning"
-          className="table table-striped table-hover  mt-3 ms-1"
+          className="mt-3 small"
         >
           <thead className="Table-dark ">
             <tr>

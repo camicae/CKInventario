@@ -5,9 +5,11 @@ Sistema web para gerenciamento de inventário de peças de uma equipe Baja SAE, 
 
 
 Demo:
+![demo_v2-ezgif com-cut](https://github.com/user-attachments/assets/bae2d714-27f3-45c1-9bab-c6aaea4075cf)
 
 
-![GravaodeTela2026-02-05022227-ezgif com-optimize](https://github.com/user-attachments/assets/c1fc82da-4b90-4058-bae3-1f1b4af99dbd)
+
+
 
 
 ### 🎯 Objetivo
@@ -52,13 +54,20 @@ Consultas SQL centralizadas
 
 Conexões abertas por requisição e fechadas corretamente
 
-Funcionalidades atuais:
+> Funcionalidades atuais:
+<ul>
+  <li>
+    Listagem de peças
+  </li>
+<li>
+  Busca por nome
+</li>
+<li>
+  Adição e remoção de itens
+</li>
+</ul>
 
-Listagem de peças
 
-Busca por nome
-
-Adição e remoção de itens
 
 
 
@@ -74,6 +83,16 @@ Interface baseada em Bootstrap
 
 Tema aplicado globalmente
 
-Página inicial (landing page)
+> Funcionalidades atuais:
+<ul>
+  <li>Múltiplas páginas
+</li>
+<li>
+  Listagem de peças c/ filtro por termo
+</li>
+  <li>
+    Navegação entre seções
+  </li>
+</ul>
 
-Listagem básica de peças
+

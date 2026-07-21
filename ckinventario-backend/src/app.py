@@ -34,6 +34,7 @@ FROM pecas p
 JOIN subsistemas s ON p.subsistema_id = s.id
 """
 
+# utilizar em filtro por subsistema
 SQL_PESQUISA_EXATA = """
 SELECT p.id, p.nome, s.nome AS subsistema_nome
 FROM pecas p

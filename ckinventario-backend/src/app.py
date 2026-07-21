@@ -17,7 +17,7 @@ def db_connection():
 
 
 # =========================
-# SQL (centralizado)
+# SQL 
 # =========================
 SQL_PESQUISA_APROX = """
 SELECT p.id, p.nome, p.data_fabricacao, p.data_aquisicao,

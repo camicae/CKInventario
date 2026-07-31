@@ -75,11 +75,11 @@ def pesquisar_peca():
         conn.close()
 
 
-@app.route("/editar_inventario/adicionar_item", methods=["PUT"])
+@app.route("/editar_inventario/adicionar_item", methods=["POST"])
 def adicionar_peca():
     conn = db_connection()
     try:
-        data = request.get_json(silent=True)
+        data = request.get_json()
         if not data:
             return jsonify({"message": "JSON inválido"}), 400
 
@@ -89,8 +89,11 @@ def adicionar_peca():
         data_aquisicao = data.get("data_aquisicao")
 
         if not nome_peca or not subsistema_peca:
-            return jsonify({"message": "Campos obrigatórios ausentes"}), 400
+            return jsonify({"message": "Campos obrigatórios ausentes - nome ou subsistema"}), 400
 
+        if data_fabricacao and data_aquisicao:
+                return jsonify({"message": "Objeto não pode ter ambas as datas preenchidas"}), 400  
+            
         params = (
             nome_peca,
             subsistema_peca,

@@ -1,5 +1,5 @@
 import React from "react";
-import Index from "../Home";
+import Index from "../home";
 
 const PageHome = () => {
   return <Index />;

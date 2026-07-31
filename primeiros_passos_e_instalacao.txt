@@ -1,0 +1,37 @@
+no repositorio frontend:
+baixar npm (node package manager) via Node.js:
+ele quem organiza todas as dependencias e bibliotecas
+- tem instalador para windows e mac no site oficial do NodeJS
+- usar curl p/ linux
+
+instalar pacotes usando o npm:
+npm install:
+- ele vai usar o arquivo package.json (que contem nossas dependencias) para automaticamente baixa-las e instala-las
+
+
+iniciar o ambiente:
+npm run -dev (para desenvolvimento apenas):
+- é este comando que realmente inicia o frontend.
+- usar todas as vezes que for utilizar o front
+
+no repositorio backend:
+
+baixar python:
+- tem instalador para windows no site oficial do python
+- ele costuma ja vir com o pip
+
+baixar pip caso n tenha (basicamente um package manager tbm):
+- tem instruções na pagina oficial do pip.pypa.io
+
+instalar pacotes usando pip:
+- ele vai usar o arquivo requirements.txt (que contem nossas dependencias) para automaticamente baixa-las e instala-las
+
+adicionar pip ao PATH (caso necessario)
+- encontre o local onde o executavel do pip esta instalado no computador
+e adicione o caminho dele (o endereço de one ele esta) nas variaveis de ambiente,
+especificamente a PATH
+
+rodar backend:
+- este comando é o que efetivamente sobe nossa aplicação backend
+- ou seja: banco de dados e API
+- python '\app.py'

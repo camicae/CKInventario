@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router";
-import ListarPecas from "../Home/listaPecas";
+import ListarPecas from "../home/listaPecas";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import AdicionarItem from "./adcItem";
+import AdicionarItem from "./adicionarItem";
 
 
 const Index = () => {
@@ -24,6 +24,7 @@ const Index = () => {
               onClick={() => (navigate('/editar_inventario/adicionar_item'))}
             >
               Adicionar item
+          
             </Button>
           </Col>
         </Row>

@@ -1,4 +1,6 @@
-interface PecasGerais {
+
+
+export interface PecasGerais {
   id:string;
   nome:string;
   subsistema_nome:string;
@@ -9,4 +11,3 @@ interface PecasGerais {
   // pode ser null
   data_aquisicao:string;
 }
-export {type PecasGerais};

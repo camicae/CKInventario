@@ -1,6 +1,6 @@
 import PageHome from "../modules/pages/PageHome";
 import PageEditarInventario from "../modules/pages/PageEditarInventario";
-import AdicionarItem from "../modules/EditarInventario/adcItem";
+import AdicionarItem from "../modules/EditarInventario/adicionarItem";
 
 
 const routes = [

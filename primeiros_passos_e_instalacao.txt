@@ -9,10 +9,21 @@ npm install:
 - ele vai usar o arquivo package.json (que contem nossas dependencias) para automaticamente baixa-las e instala-las
 
 
-iniciar o ambiente:
+como rodar o frontend:
+
+Usando script:
+na pasta raiz (\CKInventario), executar no terminal powershell:
+.\init_frontend.ps1
+
+
+Usando npm diretamente:
 npm run -dev (para desenvolvimento apenas):
 - é este comando que realmente inicia o frontend.
 - usar todas as vezes que for utilizar o front
+
+
+==============================================================
+
 
 no repositorio backend:
 
@@ -31,7 +42,13 @@ adicionar pip ao PATH (caso necessario)
 e adicione o caminho dele (o endereço de one ele esta) nas variaveis de ambiente,
 especificamente a PATH
 
-rodar backend:
+como rodar o backend:
+
+Usando script:
+na pasta raiz (\CKInventario), executar no terminal powershell:
+.\init_backend.ps1
+
+Usando diretamente o python:
 - este comando é o que efetivamente sobe nossa aplicação backend
 - ou seja: banco de dados e API
 - python '\app.py'

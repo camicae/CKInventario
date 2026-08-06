@@ -1,5 +1,4 @@
 # 🏎️ CKInventário 
-##      (em desenvolvimento)
 
 Sistema web para gerenciamento de inventário de peças de uma equipe Baja SAE, desenvolvido com foco em leveza, organização e modularidade.
 

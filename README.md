@@ -43,7 +43,7 @@ E tudo (ou quase) tem de ser transportado com certa frequência, sejam de um pr�
 <li>React
 <li>TypeScript
 <li>Vite
-<li>Bootstrap (biblioteca JS) com tema [Brite](https://bootswatch.com/brite/) [Currículo](https://drive.google.com/file/d/10jNankh6eQqvUVqnFmvhPDEzF8Y_-6Ei/view?usp=sharing) 
+<li><p>Bootstrap (biblioteca JS) com tema [Brite](https://bootswatch.com/brite/)</p>
 </ul>
 
 

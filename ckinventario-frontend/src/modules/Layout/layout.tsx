@@ -15,8 +15,10 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <>
-      <div className="bg-light min-vh-100">
-        <nav className="navbar navbar-expand-lg bg-dark mb-4" data-bs-theme="dark">
+    {/* tema claro/escuro */}
+      <div className="bg-dark min-vh-100">
+        {/* tema da navbar */}
+        <nav className="navbar navbar-expand-lg bg-light mb-4" data-bs-theme="dark">
           <div className="container-fluid">
             <Link
               to="/"

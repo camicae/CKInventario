@@ -12,7 +12,8 @@ Demo (clique para melhor visualização):
 
 
 
-#🎯 Objetivos:
+
+# 🎯 Objetivos:
 
 # Centralizar o controle de peças da equipe
 Precisamos de uma quantidade enorme de itens: desde discos de corte até placas de circuito, infinitos parafusos, lacres, placas de fibra de vidro...

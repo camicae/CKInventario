@@ -1,2 +1,4 @@
 CKInventario_DOCS.md
 main.py
+inventario.db-shm
+inventario.db-wal

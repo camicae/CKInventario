@@ -89,7 +89,7 @@
     rgba(255, 255, 255, 0)
   );
   --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 0.875rem;
+  --bs-body-font-size: 1.000rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
@@ -2657,7 +2657,7 @@ textarea.form-control-lg {
   display: flex;
   align-items: center;
   padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  font-size: 0.975rem;
   font-weight: 400;
   line-height: 1.5;
   color: var(--bs-body-color);
@@ -2672,7 +2672,7 @@ textarea.form-control-lg {
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text {
   padding: 0.75rem 1.25rem;
-  font-size: 0.875rem;
+  font-size: 0.975rem;
   border-radius: var(--bs-border-radius-lg);
 }
 .input-group-sm > .btn,
@@ -2928,7 +2928,7 @@ textarea.form-control.is-invalid {
   --bs-btn-padding-x: 1rem;
   --bs-btn-padding-y: 0.5rem;
   --bs-btn-font-family: ;
-  --bs-btn-font-size: 0.875rem;
+  --bs-btn-font-size: 1.000 rem;
   --bs-btn-font-weight: 400;
   --bs-btn-line-height: 1.5;
   --bs-btn-color: var(--bs-body-color);

@@ -5,7 +5,7 @@ import inventarioService from "../../service/inventarioService";
 import { toast } from "react-hot-toast";
 import { AxiosError } from "axios";
 import { type novaPeca } from "./types";
-
+import { MdOutlineCloseFullscreen } from "react-icons/md";
 // Componente para adicionar um item ao inventário
 
 // Define a nova peça com valores iniciais vazios
@@ -33,6 +33,14 @@ const AdicionarItem = () => {
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState("");
 
+  // APENAS PARA TESTE! CASO CONTRARIO, NÃO UTILIZE 
+  // const pecaTeste: novaPeca = {
+  //   nome_peca: "Teste",
+  //   subsistema_peca: "1",
+  //   data_fabricacao: "2023-01-01",
+  //   data_aquisicao: "2023-01-01",
+  // };
+
   // chama metodo de listagem com os parâmetros da nova peça,
   // para exibir a peça adicionada na tela
   const mostrarPecaAdicionada = (peca: novaPeca) => {
@@ -41,14 +49,14 @@ const AdicionarItem = () => {
       .then((response) => {
         console.log("Peça adicionada:", response.data);
         setExibirCard(true);
-        setPecaAdicionada(response.data);
+        //setPecaAdicionada(response.data);
+        setPecaAdicionada(peca);
       })
       .catch((error: AxiosError) => {
         console.error("Erro ao exibir peça:", error);
         toast.error("Erro ao adicionar peça. Por favor, tente novamente.");
       });
   };
-
 
   const handleAdicionar = (peca: novaPeca) => {
     if (
@@ -91,30 +99,65 @@ const AdicionarItem = () => {
             </div>
           </Col>
         </Row>
+
+{/* Apenas para teste! Caso contrario, nao utilize */}
+        {/* <Row className="justify-content-end mt-4">
+          <Col xs={8} sm={10} md={8} lg={8} xl={8}>
+            <div className="d-flex justify-content-end mb-3">
+              <Button
+                variant="primary"
+                onClick={() => {
+                  mostrarPecaAdicionada(pecaTeste);
+                }}
+              >
+                testar card
+              </Button>
+            </div>
+          </Col>
+        </Row> */}
+
+
         {exibirCard && (
-          <Row className="justify-content-start mt-4">
-            <Col xs={8} sm={10} md={8} lg={8} xl={8}>
-              <Card>
-                <Card.Body>
-                  <Card.Title>Peça adicionada:</Card.Title>
-                  <div>
-                    <p>
-                      <strong>Nome:</strong> {pecaAdicionada?.nome_peca}
-                    </p>
-                    <p>
-                      <strong>Subsistema:</strong> {pecaAdicionada?.subsistema_peca}
-                    </p>
-                    <p>
-                      <strong>Data de Fabricação:</strong> {pecaAdicionada?.data_fabricacao}
-                    </p>
-                    <p>
-                      <strong>Data de Aquisição:</strong> {pecaAdicionada?.data_aquisicao}
-                    </p>
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
+          <div>
+            <Row className="justify-content-start mt-4 mb-3">
+              <Col xs={8} sm={10} md={8} lg={8} xl={8}>
+                <Card>
+                  <Card.Body>
+                     <div
+                        className="d-flex justify-content-end"
+                        style={{ color: "#db1d0f" }}
+                      >
+                        <MdOutlineCloseFullscreen
+                          size={30}
+                          onClick={() => {
+                            setExibirCard(false);
+                            setPecaAdicionada(null);
+                          }}
+                        />
+                      </div>
+                    <Card.Title> <p><strong>Peça adicionada:</strong></p></Card.Title>
+                    <div>
+                      <p>
+                        <strong>Nome:</strong> {pecaAdicionada?.nome_peca}
+                      </p>
+                      <p>
+                        <strong>Subsistema:</strong>{" "}
+                        {pecaAdicionada?.subsistema_peca}
+                      </p>
+                      <p>
+                        <strong>Data de Fabricação:</strong>{" "}
+                        {pecaAdicionada?.data_fabricacao}
+                      </p>
+                      <p>
+                        <strong>Data de Aquisição:</strong>{" "}
+                        {pecaAdicionada?.data_aquisicao}
+                      </p>
+                    </div>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </Row>
+          </div>
         )}
         <h1>Insira as informações do item</h1>
         <Row className="justify-content-start">
@@ -146,21 +189,21 @@ const AdicionarItem = () => {
                para o usuario escolher */}
               <Card className="mt-2">
                 <Card.Body>
-                    {subsistemas.map((subsistema) => (
-                      <div key={subsistema.id}>
-                        <Form.Check
-                          type="radio"
-                          id={"subsistemas disponíveis"}
-                          label={subsistema.nome}
-                          checked={pecaAvulsa.subsistema_peca === subsistema.id}
-                          onChange={() => {
-                            pecaAvulsa.subsistema_peca = subsistema.id;
-                            console.log(pecaAvulsa.subsistema_peca);
-                            setSubsistemaSelecionado(subsistema.nome);
-                          }}
-                        />
-                      </div>
-                    ))}
+                  {subsistemas.map((subsistema) => (
+                    <div key={subsistema.id}>
+                      <Form.Check
+                        type="radio"
+                        id={"subsistemas disponíveis"}
+                        label={subsistema.nome}
+                        checked={pecaAvulsa.subsistema_peca === subsistema.id}
+                        onChange={() => {
+                          pecaAvulsa.subsistema_peca = subsistema.id;
+                          console.log(pecaAvulsa.subsistema_peca);
+                          setSubsistemaSelecionado(subsistema.nome);
+                        }}
+                      />
+                    </div>
+                  ))}
                 </Card.Body>
               </Card>
             </div>
@@ -226,7 +269,7 @@ const AdicionarItem = () => {
               variant="primary"
               onClick={() => {
                 handleAdicionar(pecaAvulsa);
-                console.log("Nova peça:", pecaAvulsa);
+                //console.log("Nova peça:", pecaAvulsa);
               }}
             >
               Adicionar Item

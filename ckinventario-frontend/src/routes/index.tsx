@@ -5,7 +5,7 @@ import AdicionarItem from "../modules/EditarInventario/adicionarItem";
 
 const routes = [
   {
-    path: "/",
+    path: "/pesquisar_inventario",
     element: <PageHome />,
     breadcrumb: "placeholder",
   },
@@ -19,6 +19,11 @@ const routes = [
     element: <AdicionarItem />,
     breadcrumb: "placeholder",
   },
+  // {
+  //   path: "/pesquisar_inventario/filtro_subsistema",
+  //   element: <FiltrarPorSubsistema />,
+  //   breadcrumb: "placeholder",
+  // },
 ];
 
 export {routes}

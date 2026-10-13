@@ -160,6 +160,30 @@ def remover_peca():
     finally:
         conn.close()
 
+# routing da pesquisa exata por subsistema
+# falta: safeguards de requisicao e para caso não encontre o subsistema
+@app.route("/pesquisar_inventario/filtro_subsistema", methods=["GET"])
+def pesquisar_peca_por_subsistema(subsistema_peca):
+    conn = db_connection()
+    try:
+        params = (subsistema_peca)
+        cursor = conn.execute(SQL_PESQUISA_EXATA, params)
+        resultados = [dict(row) for row in cursor.fetchall()]
+        subsistema_nome = (
+            resultados[0].get("subsistema_nome")
+            if resultados else "desconhecido"
+        )
+
+        return jsonify(
+                {
+                    "message": f"mostrandopecas do subsistema: '{subsistema_nome}'",
+                    "data": resultados,
+                }
+                ), 200
+
+    finally:
+        conn.close()
+
 
 # =========================
 # MAIN

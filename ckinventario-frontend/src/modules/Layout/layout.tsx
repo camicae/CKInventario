@@ -19,7 +19,7 @@ export default function Layout({ children }: LayoutProps) {
         <nav className="navbar navbar-expand-lg bg-dark mb-4" data-bs-theme="dark">
           <div className="container-fluid">
             <Link
-              to="/"
+              to="/pesquisar_inventario"
               className="navbar-brand d-flex align-items-center gap-2"
               onClick={() => setSearchParams({})}
             >
@@ -51,7 +51,7 @@ export default function Layout({ children }: LayoutProps) {
                   <li className="nav-item">
                     <Link
                       className="nav-link"
-                      to="/"
+                      to="/pesquisar_inventario"
                       onClick={() => setIsNavOpen(false)}
                     >
                       <GiHomeGarage size="40px" />
